@@ -11,8 +11,15 @@ $(document).ready(() => {
       type: "GET",
       url: "/api/test2",
       dataType: "json",
+    }).then((res) => console.log(res));
+  });
+  $("#btnSubmit3").on("click", () => {
+    $.ajax({
+      type: "GET",
+      url: "/api/test3",
+      dataType: "json",
     }).then((res) => {
-      $("#btn").html(res.message);
+      $("#btn").html(res.data);
     });
   });
 });
